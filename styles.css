@@ -1,0 +1,536 @@
+:root {
+  --bg-gray: #e0e0e0;
+  --card-white: #ffffff;
+  --green: #4f7f6f;
+  --badge-bg: #e8f0ec;
+  --text-dark: #222222;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-gray);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ---------------------- INTRO SECTION ---------------------- */
+.intro-section {
+  display: flex;
+  gap: 2rem;
+  background: var(--card-white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.intro-image img {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 15rem;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.intro-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* ---------------------- PROFICIENCY SECTION ---------------------- */
+.proficiency-section {
+  background: var(--card-white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.proficiency-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.proficiency-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 8rem;
+}
+
+.levels span {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-row label {
+  font-weight: 600;
+}
+
+.bar {
+  height: 0.9rem;
+  background: var(--green);
+  border-radius: 1rem;
+}
+
+.js {
+  width: 10%;
+}
+.react {
+  width: 10%;
+}
+.node {
+  width: 45%;
+}
+.htmlcss {
+  width: 70%;
+}
+
+/* ----------------------  (Proficiency + Skills side‑by‑side) ---------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+/* ---------------------- SKILLS SECTION ---------------------- */
+.skills-section {
+  background: var(--card-white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+.skills-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.3rem;
+  color: var(--text-dark);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-grid span {
+  background: var(--badge-bg);
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+/* ---------------------- RESPONSIVE BEHAVIOR ---------------------- */
+@media (max-width: 48rem) {
+  .two-col {
+    flex-direction: column;
+  }
+  .intro-section {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .intro-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .intro-image img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+/* ---------------------- Projects Section ---------------------- */
+.projects-section {
+  width: 100%;
+  /* padding: 40px 20px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 35px;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+.projects-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0%;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* ---------- GRID ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ---------- CARDS ---------- */
+.project-card {
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Dark green first card */
+.card-dark {
+  background: #4e8f72; /* extracted dark green */
+  color: #ffffff;
+}
+
+/* Light mint cards */
+.card-light {
+  background: #f1fbf9;
+  color: #2b2b2b;
+}
+
+/* Header with year & heart */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.year {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.heart {
+  color: #e67c73; /* extracted heart color */
+  font-size: 22px;
+}
+
+/* Titles */
+.project-title {
+  margin: 15px 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Text formatting */
+.project-card p {
+  font-size: 15px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.project-card strong {
+  font-weight: 700;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 28px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+/* ----education and tools---- */
+/* WRAPPER */
+.education-tools-wrapper {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.education-tools-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 35px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* EDUCATION CARDS */
+.edu-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.card-green {
+  background: #4e8f72;
+  color: white;
+}
+
+.card-light {
+  background: #f1fbf9;
+  color: #2b2b2b;
+}
+
+/* LEFT SIDE OF CARD */
+.edu-dates {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.edu-school {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.edu-type {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* RIGHT SIDE */
+.edu-right ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.edu-right li {
+  margin-bottom: 10px;
+}
+
+/* TOOLS COLUMN */
+.tools-column {
+  display: flex;
+  flex-direction: row; /* arrange groups in a row */
+  gap: 35px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+/* TOOL GROUP */
+.tools-group {
+  background: #f1fbf9;
+  padding: 25px 20px;
+  border-radius: 18px;
+  flex: 1; /* let each group take equal width */
+  min-width: 200px; /* ensures it doesn’t shrink too much */
+}
+
+.badge-title {
+  display: inline-block; /* allows wrapping */
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center; /* center the text */
+  white-space: normal; /* allow wrapping */
+}
+/* TOOL ICONS */
+.tool-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.tool-icons img {
+  width: 42px;
+  height: 42px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .education-tools-box {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* ---EXPERIENCE SECTION---*/
+.experience-wrapper {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 35px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* EXPERIENCE CARD */
+.exp-card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  position: relative;
+  padding: 25px;
+  border-radius: 22px;
+  margin-bottom: 25px;
+}
+
+.card-green {
+  background: #4e8f72;
+  color: white;
+}
+
+.card-light {
+  background: #f1fbf9;
+  color: #2b2b2b;
+}
+
+/* TEXT BLOCK LEFT */
+.exp-dates {
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.exp-role {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+.exp-company {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* LIST */
+.exp-right ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.exp-right li {
+  margin-bottom: 10px;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #e67c73;
+  color: white;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+/* FOOTER BAR */
+
+.footer-bar {
+  max-width: 1200px;
+  background: #d85d33;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.footer-bar h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.footer-bar p {
+  font-size: 16px;
+}
+.footer-bar p a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bar p a:hover {
+  text-decoration: underline;
+}
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .exp-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .badge {
+    top: 15px;
+    right: 15px;
+  }
+}
