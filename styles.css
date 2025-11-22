@@ -1,5 +1,5 @@
 :root {
-  --bg-gray: #e0e0e0;
+  --bg-gray: hsla(0, 4%, 17%, 0.184);
   --card-white: #ffffff;
   --green: #4f7f6f;
   --badge-bg: #e8f0ec;
@@ -20,8 +20,42 @@ body {
   flex-direction: column;
   gap: 3rem;
 }
+.header {
+  display: grid;
+  grid-template-columns: 19rem 1fr;
+  /* background: #fff;*/
+  margin: 1.5rem 0;
+  gap: 2rem;
+}
 
-/* ---------------------- INTRO SECTION ---------------------- */
+.profile-img img {
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  padding: 20px;
+  aspect-ratio: 1/1;
+  gap: 1.65rem;
+}
+
+.intro {
+  width: 51.785rem;
+  height: 17.185rem;
+  border-radius: 2rem;
+  padding: 20px;
+  gap: 1.65rem;
+  font-weight: 400;
+  background: #fff;
+}
+.intro h {
+  font-weight: 600;
+}
+.intro p {
+  font-weight: 400;
+  line-height: 151%;
+  text-align: left;
+}
+/* ---------------------- INTRO SECTION ---------------------- 
 .intro-section {
   display: flex;
   gap: 2rem;
@@ -33,8 +67,8 @@ body {
 }
 
 .intro-image img {
-  width: 14rem;
-  height: 14rem;
+  width: 15rem;
+  height: 15rem;
   object-fit: cover;
   border-radius: 1rem;
 }
@@ -54,7 +88,8 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   color: var(--text-dark);
-}
+} 
+
 
 /* ---------------------- PROFICIENCY SECTION ---------------------- */
 .proficiency-section {
