@@ -1,4 +1,3 @@
-/* --- 1. VARIABLES & RESET --- */
 :root {
   /* Colors */
   --bg-color: #8c8f91;
@@ -10,7 +9,6 @@
   --light-green: #e6efec;
   --accent-orange: #d96c46;
 
-  /* Spacing & Sizing in REM (Assumes 16px base) */
   --gap: 1.5rem; /* 24px */
   --border-radius-lg: 1.875rem; /* 30px */
   --border-radius-md: 1.25rem; /* 20px */
@@ -21,7 +19,6 @@
   --pad-sm: 0.9375rem; /* 15px */
 }
 
-/* Set base font size to 100% (usually 16px) so rems work correctly */
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -38,11 +35,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
-  /* Simulating the noise texture */
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
   color: var(--text-dark);
   padding: 3.75rem 1.25rem; /* 60px 20px */
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   line-height: 1.6;
@@ -56,7 +50,7 @@ body {
   gap: var(--gap);
 }
 
-/* --- 2. GENERAL UTILITIES --- */
+/* ---  GENERAL  --- */
 .card {
   background: var(--card-bg);
   border-radius: var(--border-radius-lg);
@@ -92,7 +86,7 @@ li {
   color: var(--text-grey);
 }
 
-/* --- 3. HEADER (Profile) --- */
+/* --- Profile--- */
 .header-section {
   display: grid;
   grid-template-columns: 20rem 1fr; /* 320px 1fr */
@@ -124,7 +118,7 @@ li {
   color: var(--text-grey);
 }
 
-/* --- 4. PROFICIENCY & SKILLS --- */
+/* --- PROFICIENCY & SKILLS --- */
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -182,7 +176,7 @@ li {
   color: var(--text-dark);
 }
 
-/* --- 5. PROJECTS SECTION --- */
+/* --- PROJECTS SECTION --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -242,7 +236,7 @@ li {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* --- 6. EXPERIENCE / EDUCATION TIMELINE --- */
+/* ---  EXPERIENCE / EDUCATION TIMELINE --- */
 .timeline-card {
   display: grid;
   grid-template-columns: 15.625rem 1fr;
@@ -297,7 +291,7 @@ li {
   line-height: 1.5;
 }
 
-/* --- 7. EDUCATION & TOOLS GRID --- */
+/* ---  EDUCATION & TOOLS GRID --- */
 .edu-tools-wrapper {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -342,7 +336,7 @@ li {
   color: var(--text-dark);
 }
 
-/* --- 8. FOOTER --- */
+/* --- FOOTER --- */
 .footer-pill {
   background: var(--accent-orange);
   color: white;
@@ -378,7 +372,7 @@ li {
   opacity: 0.8;
 }
 
-/* --- 9. RESPONSIVE MEDIA QUERIES --- */
+/* ---  RESPONSIVE MEDIA QUERIES --- */
 
 /* Tablet Landscape / Small Desktop (Max 1024px ~ 64rem) */
 @media (max-width: 64rem) {
